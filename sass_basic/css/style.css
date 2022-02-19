@@ -1,3 +1,19 @@
 
-
-/*# sourceMappingURL=style.css.map */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  
+  ul, ol, li {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  #box {
+    width: 300px; height: 300px; margin: 50px; background: aqua;
+  }
+  
