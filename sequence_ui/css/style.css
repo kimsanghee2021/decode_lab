@@ -1,0 +1,12 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+body{width:100%; height:100vh; overflow:hidden; background: #111;}
+ul,li,ol{list-style:none;}
+img{border:none;}
+main{width:100%; height:50vh; overflow:hidden; position: relative; top:20vh; background: #111;}
+main > img{width:100%; height:100%; object-fit: cover; position:absolute; top:0; left:0;}
