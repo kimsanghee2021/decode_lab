@@ -43,15 +43,25 @@ const imgs = main.querySelectorAll('img');
 const aside = document.querySelector('aside');
 const len = imgs.length;
 let total = 0;
-
+let delay = getComputedStyle(aside).transitionDuration; //문자로 되어있는것을 숫자로 변경해야한다.
+delay = parseFloat(delay); //숫자로 변경 
+console.log(delay);
 
 imgs.forEach(function(img){
     img.onload = function(){
         total++;
-        console.log(total);
-        aside.innerText = `(${total} /${len}) `);
+        // console.log(total);
+        aside.innerText =`${parseInt(total/len*100)}% / 100% `;
 
-        if(total == len)aside.remove();
+        if(total == len){
+
+            //모든 이미지 소스 로딩이 완료되면 off 클래스를 붙여서 fade효과를 주고 
+            aside.classList.add('off');
+            
+            setTimeout(function(){
+                aside.remove();
+            },delay);
+        }
     }
 });
 //미션 1 - 로딩화면에 다음의 텍스트를 출력 (현재 로딩되는 이미지 순번 / 전체 이미지 갯수)
