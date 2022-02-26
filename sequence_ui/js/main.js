@@ -39,6 +39,7 @@ DOM.classList.contains('클래스명') : 해당 클래스명이 있으면 true�
 */
 
 const main = document.querySelector('main');
+const title = document.querySelector('p');
 
 
 //동적으로 200개의 img 태그를 생성
@@ -48,19 +49,7 @@ createDOM();
 imgLoad();
 
 //mousemove Elvent
-window.addEventListener('mousemove',function(e){
-    const x = e.clientX;
-    const wid = window.innerWidth;
-    console.log(wid);
-    const percent = parseInt(x/wid*100);
-    const imgs = document.querySelectorAll('main img');
-    console.log(percent);
-
-    for(const img of imgs ){
-        img.style.display = 'none';
-        imgs[percent].style.display = 'block';
-    }
-});
+window.addEventListener('mousemove',show);
 
 
 function createDOM(){
@@ -99,4 +88,23 @@ function convertSpeed(el){
     let delay = getComputedStyle(el).transitionDuration; //문자로 되어있는것을 숫자로 변경해야한다.
     delay = parseFloat(delay); //숫자로 변경 
     return delay;
+}
+function show(e){
+    const x = e.clientX;
+    const Y = e.clientY;
+
+    const wid = window.innerWidth;
+    const hei = window.innerHeight;
+
+    const percentWdith = parseInt(x/wid*100);
+    const percentHeight = parseInt(Y/hei*100);
+    const imgs = document.querySelectorAll('main img');
+
+    console.log(percentHeight);
+
+    for(const img of imgs ){
+        img.style.display = 'none';
+        imgs[percentWdith].style.display = 'block';
+    }
+    title.style.transform = `translate(${-x/20}px,${-Y/20}px)`
 }
