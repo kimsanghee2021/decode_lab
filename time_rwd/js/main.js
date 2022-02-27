@@ -9,6 +9,7 @@
 const numbers = document.querySelectorAll('.screen span');
 const main = document.querySelector('main');
 const menus = document.querySelectorAll('nav span');
+const [am,pm] = document.querySelectorAll('.screen em');
 
 setInterval(function(){
 
@@ -56,7 +57,18 @@ function getTime(){
     let hr = now.getHours();
     let min = now.getMinutes();
     let sec = now.getSeconds();
-    return [hr,min,sec];
+    let modified_hr = 0;
+
+    if(hr > 12){
+        modified_hr = hr - 12;
+        am.classList.remove('on');
+        pm.classList.add('on');
+    } else{
+        modified_hr = hr;
+        am.classList.add('on');
+        pm.classList.remove('on');
+    }
+    return [modified_hr,min,sec];
 }
 
 //변환할 숫자값과 순서값을 인수로 받아서 숫자를 보정하고 해당 인수의 부모요소에 값 적용하는 함수
