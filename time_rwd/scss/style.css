@@ -47,6 +47,9 @@ main.night {
 main.night figure {
   background-image: url(../img/phone_night.png);
 }
+main.dark_txt header h1, main.dark_txt header #gnb li a, main.dark_txt header #sns li i, main.dark_txt article p, main.dark_txt figure .screen {
+  color: #555;
+}
 main header {
   width: 90vw;
   position: absolute;

@@ -8,7 +8,7 @@
 
 const numbers = document.querySelectorAll('.screen span');
 const main = document.querySelector('main');
-
+const menus = document.querySelectorAll('nav span');
 
 setInterval(function(){
 
@@ -21,19 +21,32 @@ setInterval(function(){
         {condition :times[0] >= 16 && times[0] < 20, name : 'evening' },
         {condition :times[0] >= 20 || times[0] < 5, name : 'night' },
     ]
+
     //반환된 숫자값들을 반복을 돌며 값을 보정해서 선택자의 순번에 맞게 적용
     //times.forEach((time, idx)=>setTime(time,idx));
     times.forEach(function(time, index){
         setTime(time, index);
     });
 
-    data.forEach(function(item){
+    //data의 정보값을 반복 돌면서 조건문 설정
+    data.forEach(function(item, idx){
         if(item.condition){
             main.className = '';
             main.classList.add(item.name);
+
+            for(const menu of menus){
+                menu.classList.remove('on');
+                menus[idx].classList.add('on');
+            }
         }
     });
 
+    //현재 매인의 클래스 명이 afternoon일때만 추가로 dark_txt클래스 추가하기
+    if(main.classList.contains('afternoon')){
+        main.classList.add('dark_txt');
+    } else{
+        main.classList.remove('dark_txt');
+    }
 },1000);
 
 

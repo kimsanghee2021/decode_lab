@@ -31,7 +31,11 @@ main {
             background-image: url(../img/phone_night.png);
         }
     }
-
+    &.dark_txt{
+        header h1, header #gnb li a, header #sns li i, article p, figure .screen{
+            color:#555;
+        }
+    }
     header {
         width: 90vw; position: absolute; top: 5vh; left: 5vw; 
         display: flex; justify-content: space-between; align-items: center;
