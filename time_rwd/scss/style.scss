@@ -40,11 +40,10 @@ main {
             font: 4vw/1 'orbitron'; color: #fff; margin-bottom: 20px;
             strong {opacity: 0.7;}
         }
-
-    em {
-      font: bold 14px/1.2 'arial'; color: #fff; letter-spacing: 2px;
+        em {
+            font: bold 14px/1.2 'arial'; color: #fff; letter-spacing: 2px;
+        }
     }
-  }
 }
 figure{
     width:1200px; height: 800px; position:absolute; right:-50px; top:50%; transform:translateY(-30%);
@@ -55,6 +54,7 @@ figure{
         font: 50px/300px 'orbitron'; color:#fff; text-align: center; overflow:hidden;
     }
 }
+
 nav{
     width:90vw; height:35px; position:absolute; left:5vw; bottom: 7vh;;
     display: flex; justify-content: space-between;
