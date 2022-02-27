@@ -22,7 +22,30 @@ main {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url(../img/bg_morning.jpg);
+}
+main.morning {
+  background-image: url("../img/bg_morning.jpg");
+}
+main.morning figure {
+  background-image: url(../img/phone_morning.png);
+}
+main.afternoon {
+  background-image: url("../img/bg_afternoon.jpg");
+}
+main.afternoon figure {
+  background-image: url(../img/phone_afternoon.png);
+}
+main.evening {
+  background-image: url("../img/bg_evening.jpg");
+}
+main.evening figure {
+  background-image: url(../img/phone_evening.png);
+}
+main.night {
+  background-image: url("../img/bg_night.jpg");
+}
+main.night figure {
+  background-image: url(../img/phone_night.png);
 }
 main header {
   width: 90vw;
@@ -85,7 +108,7 @@ figure {
   right: -50px;
   top: 50%;
   transform: translateY(-30%);
-  background: url("../img/phone_evening.png") no-repeat right top;
+  background: url("../img/phone_morning.png") no-repeat right top;
   background-size: contain;
 }
 figure .screen {
@@ -95,7 +118,7 @@ figure .screen {
   top: 99px;
   left: 133px;
   font: 50px/300px "orbitron";
-  color: #fff;
+  color: #ddd;
   text-align: center;
   overflow: hidden;
 }
