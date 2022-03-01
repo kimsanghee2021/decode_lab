@@ -94,10 +94,9 @@ nav{
         width:23%; height: 100%; background: rgba(255,255,255,.3);
         display: flex; justify-content: center; align-items: center;
         font:12px/1 'orbitron'; color:#fff; letter-spacing: 2px; opacity: 0.7; transition: 0.5s;
-        
-        &.on{
-            background: rgba(255,255,25,0.6);
-        }
     }
+    &.on{
+        background: rgba(255,255,25,0.6);
 
+    }
 }
