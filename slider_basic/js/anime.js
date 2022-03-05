@@ -1,5 +1,6 @@
 class Animate {
   constructor(selector, option){
+    if(!option.duration) option.duration = 500;
     this.selector = selector;
     this.option = option;
     this.startTime = performance.now(); 
@@ -39,8 +40,7 @@ class Animate {
     if(progress < 0) progress = 0;
     if(progress > 1) progress = 1; 
     
-    if(progress < 1){
-      console.log(progress);
+    if(progress < 1){     
       requestAnimationFrame(time=> this.run(time));  
     }   
     else {
@@ -63,8 +63,7 @@ class Animate {
       console.log(result);     
       window.scroll(0, result);
     }
-    else{
-      console.log(result);
+    else{      
       this.selector.style[this.option.prop] = `${result}px`;
     }    
   }  
