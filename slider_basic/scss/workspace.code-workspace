@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../../../slider_basic-master"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "decode_lab"
+	}
+}

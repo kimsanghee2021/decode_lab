@@ -1,0 +1,32 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#wrap {
+  width: 900px;
+  height: 500px;
+  border: 1px solid #ddd;
+  margin: 100px auto;
+  position: relative;
+}
+#wrap button {
+  position: absolute;
+  left: 0;
+  top: -50px;
+}
+#wrap article {
+  width: 200px;
+  height: 200px;
+  background: aqua;
+}
+
+/*# sourceMappingURL=style.css.map */

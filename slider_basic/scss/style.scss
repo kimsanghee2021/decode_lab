@@ -1,0 +1,10 @@
+@charset 'UTF-8';
+@import 'reset';
+
+#wrap{
+    width:900px; height:500px; border:1px solid #ddd; margin:100px auto; position:relative;
+    button{position: absolute; left:0; top:-50px;}
+    article{
+        width:200px; height:200px; background: aqua;
+    }
+}
